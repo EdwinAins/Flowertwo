@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
+  <audio id="miAudio" >
+    <source src="Eresparami.mp3" type="audio/mpeg">
+       no es compatible
+  </audio>
   <style>
+    button {
+      position: relative;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    .corazon {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      clip-path: polygon(50% 0%, 100% 34%, 100% 90%, 50% 100%, 0% 90%, 0% 34%);
+      animation: corazon 0.8s ease-in-out;
+    }
+    
+    @keyframes corazon {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.5); }
+      100% { transform: scale(1); opacity: 0; }
+    }
+    </style>
+    </head>
+    <body>
+    
+    <button onclick="reproducirAudio()">
+      Presiona Aquí Princesa <3
+      <span class="corazon"></span>
+      <span class="corazon"></span>
+      <span class="corazon"></span>
+    </button>
+    
+   
+    
+    <script>
+    function reproducirAudio() {
+      var audio = document.getElementById("miAudio");
+      audio.play();
+    }
+    </script>
+  
+  <style>
+        
 
             body {
               
         margin:0;
-        background: rgb(231, 139, 243);
+        background: rgba(115, 147, 206, 0.575);
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -188,6 +248,7 @@
 
 
 
+
   
 
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -242,6 +303,6 @@ maskUnits="userSpaceOnUse">
 <script src='//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js?r=182'></script>
 <script src='//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/findShapeIndex.js'></script>
 
-</body>
+
 
 </html>
